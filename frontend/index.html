@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sentiment Analysis Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="app-header">
+            <h1>Sentiment Analysis Tool</h1>
+
+            <p>
+                Γράψε ένα αγγλικό κείμενο και δες αν έχει θετικό
+                ή αρνητικό συναίσθημα.
+            </p>
+        </header>
+
+    <section class="weather-card">
+    <h2>Destination Weather</h2>
+
+    <div class="weather-search">
+        <input
+            id="cityInput"
+            type="text"
+            placeholder="Enter a city, e.g. Athens"
+        >
+
+        <button id="weatherBtn" type="button">
+            Search Weather
+        </button>
+    </div>
+
+    <p id="weatherError" class="error-message"></p>
+
+    <div class="weather-result">
+        <h3 id="weatherCity">—</h3>
+        <p id="weatherTemperature">Temperature: —</p>
+        <p id="weatherDescription">Condition: —</p>
+    </div>
+</section>
+
+
+        <section class="analyzer-card">
+
+            <label for="textInput">
+                Κείμενο για ανάλυση
+            </label>
+
+            <textarea
+                id="textInput"
+                placeholder="Example: I really enjoyed this movie..."
+                maxlength="1000"
+            ></textarea>
+
+            <button id="analyzeBtn" type="button">
+                Analyze
+            </button>
+
+            <div
+                id="spinner"
+                class="spinner"
+                aria-label="Loading"
+            ></div>
+
+            <p id="errorMessage" class="error-message"></p>
+
+        </section>
+
+        <section id="resultCard" class="result-card">
+
+            <h2>Αποτέλεσμα ανάλυσης</h2>
+
+            <div class="result-row">
+                <span class="result-label">Sentiment</span>
+                <p id="sentiment">—</p>
+            </div>
+
+            <div class="result-row">
+                <span class="result-label">Confidence</span>
+                <p id="confidence">—</p>
+            </div>
+
+        </section>
+
+        <section id="placesSection" class="places-section">
+            <h2>Places to Visit</h2>
+
+            <p id="placesMessage" class="places-message">
+                 Search for a city to discover nearby places.
+             </p>
+
+            <div id="placesContainer" class="places-container">
+                  <!-- Η JavaScript θα δημιουργεί εδώ τις κάρτες -->
+            </div>
+         </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
